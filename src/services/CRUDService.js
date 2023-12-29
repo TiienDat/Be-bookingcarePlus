@@ -2,10 +2,7 @@ import e from 'express';
 import db from '../models';
 import bcrypt from 'bcryptjs';
 
-
-
 const salt = bcrypt.genSaltSync(10);
-
 
 let createNewUser = async (data) => {
     return new Promise(async (resolve, reject) => {
@@ -28,7 +25,6 @@ let createNewUser = async (data) => {
     })
 
 }
-
 let hashUserPassword = (password) => {
     return new Promise(async (resolve, reject) => {
         try {
